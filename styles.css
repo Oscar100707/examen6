@@ -1,18 +1,19 @@
-   * {
+ * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
     }
 
     body {
       display: flex;
+      font-family: "Roboto", sans-serif;
       min-height: 100vh;
     }
 
     .sidebar {
       background-color: #7b3f46;
-      color: white;
+      color: #F0F8FF;
       width: 250px;
       display: flex;
       flex-direction: column;
@@ -39,25 +40,26 @@
     .sidebar nav a {
       display: block;
       padding: 10px;
-      color: white;
+      color: #F0F8FF;
       text-decoration: none;
       border-left: 4px solid transparent;
     }
 
     .sidebar nav a.active {
-      background-color: white;
-      color: #7b3f46;
+      background-color: #F0F8FF;
+      color: #A52A2A;
       font-weight: bold;
     }
 
-    .sidebar .socials {
+    .sidebar .socials ul li  {
       margin-top: auto;
       display: flex;
+      background-color: #A52A2A;
       gap: 10px;
     }
 
-    .sidebar .socials a {
-      color: white;
+    .sidebar .socials a i{
+      color: #F0F8FF;
       text-decoration: none;
       font-size: 1.2em;
     }
@@ -84,35 +86,49 @@
       text-align: center;
     }
 
-    .card {
-      color: white;
+    .section {
       display: flex;
-      padding: 20px;
-      margin-bottom: 20px;
+      align-items: center;
+      justify-content: center;
+      color:  #F0F8FF;
+      margin-bottom: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 800px;
+      overflow: hidden;
+      max-width: 1000px;
+      width: 100%;
     }
 
-    .card img {
-      width: 200px;
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 50%;
       height: auto;
-      margin-right: 20px;
-      border-radius: 10px;
     }
 
-    .card-content h2 {
+    .section .text {
+      padding: 30px;
+      flex: 1;
+      text-align: left;
+    }
+
+    .section.reverse .text {
+      text-align: right;
+    }
+
+    .section .text h2 {
       margin-bottom: 10px;
     }
 
-    .card-content p {
+    .section .text p {
       margin-bottom: 15px;
     }
 
-    .card-content a {
+    .section .text a {
       padding: 8px 15px;
-      background-color: #7b3f46;
-      color: white;
+      background-color:  #F0F8FF;
+      color: #A52A2A;
       text-decoration: none;
       border-radius: 5px;
     }
